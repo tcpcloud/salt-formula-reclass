@@ -13,6 +13,7 @@ reclass_git_data_dir:
   - branch: {{ storage.data_source.branch|default(storage.data_source.revision) }}
   {%- endif %}
   - force_reset: {{ storage.data_source.force_reset|default(False) }}
+  - update_head: {{ storage.data_source.update_head|default(True) }}
 
 {%- endif %}
 
