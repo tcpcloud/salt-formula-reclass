@@ -11,6 +11,7 @@ reclass_git_data_dir:
   - rev: {{ storage.data_source.revision|default(storage.data_source.branch) }}
   {%- if grains.saltversion >= "2015.8.0" %}
   - branch: {{ storage.data_source.branch|default(storage.data_source.revision) }}
+  - update_head: {{ storage.data_source.update_head|default(True) }}
   {%- endif %}
   - force_reset: {{ storage.data_source.force_reset|default(False) }}
 
